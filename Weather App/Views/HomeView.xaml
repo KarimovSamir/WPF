@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Weather_App.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Weather_App.Views"
+             mc:Ignorable="d" 
+             x:Name="control"
+             d:Background="White" d:DesignWidth="450" d:DesignHeight="450" FontSize="25">
+    <DockPanel>
+        <TextBlock TextAlignment="Center" DockPanel.Dock="Top" Text="{Binding Forecasts.Count}"/>
+        <Button Command="{Binding AddCommand}" DockPanel.Dock="Bottom">Add</Button>
+        <ListBox ItemsSource="{Binding Forecasts}" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel LastChildFill="False">
+                        <Button 
+                            Command="{Binding DataContext.DetailesCommand, ElementName=control}"
+                            CommandParameter="{Binding}"
+                            DockPanel.Dock="Left">⚙</Button>
+                        <TextBlock DockPanel.Dock="Left" Text="{Binding Name}"/>
+                        <TextBlock DockPanel.Dock="Right" Text="{Binding Main.Temperature, StringFormat={}{0}°C}"/>
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </DockPanel>
+</UserControl>

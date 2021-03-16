@@ -1,0 +1,94 @@
+﻿<Window x:Class="Calculator_Design.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator_Design"
+        mc:Ignorable="d"
+        Title="Calculator" Height="650" Width="900" MinHeight="450" MinWidth="770">
+
+
+    <Grid Background="DimGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="14*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <WrapPanel Grid.Row="0" >
+                <Button Background="DimGray" Foreground="White" FontSize="22" Height="50" Width="100">History</Button>
+                <Button Background="DimGray" Foreground="White" FontSize="22" Height="50" Width="100">Memory</Button>
+            </WrapPanel>
+            
+            <StackPanel Grid.Row="1">
+                
+            </StackPanel>
+
+            <DockPanel LastChildFill="False" Grid.Row="2">
+                <Button Background="DimGray" Foreground="White" DockPanel.Dock="Right">🗑</Button>
+            </DockPanel>
+
+        </Grid>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <WrapPanel Grid.Row="0">
+                <Button Background="DimGray" Foreground="White" FontSize="22" HorizontalAlignment="Left" >⚙</Button>
+                <Label Foreground="White" FontSize="22" HorizontalAlignment="Left">Standart</Label>
+            </WrapPanel>
+
+            <UniformGrid Grid.Row="3" Columns="4" Rows="6">
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">%</Button>
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">CE</Button>
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">C</Button>
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">◀</Button>
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">1/x</Button>
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">x²</Button>
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">√</Button>
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">➗</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">7</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">8</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">9</Button>
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">✖</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">4</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">5</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">6</Button>
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">➖</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">1</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">2</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">3</Button>
+                <Button Background="DarkSlateGray" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">➕</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">+/-</Button>
+                <Button Background="Black" Foreground="White" FontSize="22" HorizontalContentAlignment="Center">0</Button>
+                <Button Background="Black" Foreground="White" FontSize="28" HorizontalContentAlignment="Center">.</Button>
+                <Button Background="DarkBlue" Foreground="White" FontSize="26" HorizontalContentAlignment="Center">=</Button>
+            </UniformGrid>
+
+            <WrapPanel Grid.Row="2" HorizontalAlignment="Center">
+                <Button Background="DimGray" Foreground="White" FontSize="22" Width="100">MC</Button>
+                <Button Background="DimGray" Foreground="White" FontSize="22" Width="100">MR</Button>
+                <Button Background="DimGray" Foreground="White" FontSize="22" Width="100">M+</Button>
+                <Button Background="DimGray" Foreground="White" FontSize="22" Width="100">M-</Button>
+                <Button Background="DimGray" Foreground="White" FontSize="22" Width="100">MS</Button>
+            </WrapPanel>
+
+            <Grid Grid.Row="1">
+                <TextBox Background="DimGray" Foreground="White" FontSize="22"></TextBox>
+            </Grid>
+        </Grid>
+    </Grid>
+
+
+</Window>
